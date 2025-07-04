@@ -1,10 +1,13 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="home" className="min-h-screen bg-gradient-primary flex items-center relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-gradient-to-r from-[#159bc7] to-[#4968aa] flex items-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')]"></div>
@@ -15,14 +18,14 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-white animate-fade-in">
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 font-arabic leading-tight">
-              مستشار في التحول الرقمي
+              {t('heroTitle')}
               <span className="block text-3xl lg:text-4xl mt-2 text-blue-200">
-                وإدارة التجديد المؤسسية والحكومية
+                {t('heroSubtitle')}
               </span>
             </h1>
             
             <p className="text-xl mb-8 text-blue-100 font-arabic leading-relaxed">
-              أقدم خدمات استشارية متكاملة في التحول الرقمي والتجديد المؤسسي، بريادة تقنيات المعلومات الأردنية، مساعدتك في تحسين الأداء المؤسسي وخدمة العملاء بجودة عالية وسرعة فائقة.
+              {t('heroDescription')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -30,14 +33,14 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-white text-blue-600 hover:bg-blue-50 font-arabic text-lg px-8 py-6"
               >
-                اطلع على أعمالي
+                {t('learnMore')}
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-white text-white hover:bg-white hover:text-blue-600 font-arabic text-lg px-8 py-6"
               >
-                تواصل معي
+                {t('contactNow')}
               </Button>
             </div>
           </div>

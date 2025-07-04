@@ -1,16 +1,19 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: 'الرئيسية', href: '#home' },
-    { name: 'الخدمات', href: '#services' },
-    { name: 'من أنا', href: '#about' },
-    { name: 'الأعمال', href: '#portfolio' },
-    { name: 'تواصل معي', href: '#contact' }
+    { name: t('home'), href: '#home' },
+    { name: t('services'), href: '#services' },
+    { name: t('about'), href: '#about' },
+    { name: t('portfolio'), href: '#portfolio' },
+    { name: t('faq'), href: '#faq' },
+    { name: t('contact'), href: '#contact' }
   ];
 
   return (
@@ -19,7 +22,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="bg-gradient-primary text-white p-2 rounded-lg">
+            <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] text-white p-2 rounded-lg">
               <span className="font-bold text-xl font-arabic">تحول</span>
             </div>
           </div>
@@ -37,13 +40,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Language Toggle & Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-sm font-medium">
+                {language === 'ar' ? 'EN' : 'AR'}
+              </span>
+            </button>
+
+            <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

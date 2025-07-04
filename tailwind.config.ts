@@ -68,7 +68,7 @@ export default {
 				}
 			},
 			backgroundImage: {
-				'gradient-primary': 'linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%)',
+				'gradient-primary': 'linear-gradient(90deg, #159bc7 0%, #4968aa 100%)',
 				'gradient-secondary': 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
 			},
 			borderRadius: {
