@@ -55,13 +55,13 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-900 text-white">
+    <section id="faq" className="py-20 bg-white animate-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 font-arabic">
+        <div className="text-center mb-16 animate-slide-in-right">
+          <h2 className="text-4xl font-bold mb-4 font-tajwal bg-gradient-to-r from-[#159bc7] to-[#4968aa] bg-clip-text text-transparent">
             {language === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto font-arabic">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-tajwal">
             {language === 'ar' 
               ? 'إجابات على الأسئلة الأكثر شيوعاً حول خدماتي'
               : 'Answers to the most common questions about my services'
@@ -73,25 +73,30 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+              className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full p-6 text-right hover:bg-gray-700 transition-colors duration-200 flex items-center justify-between"
+                className="w-full p-6 text-right hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200 flex items-center justify-between group"
               >
-                <span className="font-arabic text-lg font-medium flex-1">
+                <span className="font-tajwal text-lg font-medium flex-1 text-gray-800 group-hover:text-gray-900">
                   {faq.question}
                 </span>
-                {openFAQ === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-400 flex-shrink-0 ml-3" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-blue-400 flex-shrink-0 ml-3" />
-                )}
+                <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-2 rounded-full ml-3 group-hover:scale-110 transition-transform duration-200">
+                  {openFAQ === index ? (
+                    <ChevronUp className="w-4 h-4 text-white" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4 text-white" />
+                  )}
+                </div>
               </button>
               
               {openFAQ === index && (
-                <div className="px-6 pb-6 text-gray-300 font-arabic leading-relaxed animate-fade-in">
-                  {faq.answer}
+                <div className="px-6 pb-6 text-gray-600 font-tajwal leading-relaxed animate-fade-in border-t border-gradient-to-r from-[#159bc7] to-[#4968aa] border-opacity-20">
+                  <div className="pt-4">
+                    {faq.answer}
+                  </div>
                 </div>
               )}
             </div>

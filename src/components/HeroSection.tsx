@@ -50,7 +50,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-white/20 rounded-full blur-xl"></div>
               <img
-                src="/lovable-uploads/c6772f8d-51fc-453a-991c-20066b7dbd00.png"
+                src="/lovable-uploads/238607e1-8cbe-46bc-8eac-87cda41e09bb.png"
                 alt="مستشار التحول الرقمي"
                 className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white/30 shadow-2xl"
               />
