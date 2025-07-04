@@ -31,28 +31,27 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-white text-blue-600 hover:bg-blue-50 font-tajwal text-lg px-8 py-6"
+                className="bg-white text-blue-600 hover:bg-blue-50 font-tajwal text-lg px-8 py-6 transition-all duration-300"
               >
                 {t('learnMore')}
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-blue-600 font-tajwal text-lg px-8 py-6"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-600 font-tajwal text-lg px-8 py-6 transition-all duration-300"
               >
                 {t('contactNow')}
               </Button>
             </div>
           </div>
 
-          {/* Profile Image */}
+          {/* Profile Image - Edge to Edge */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-white/20 rounded-full blur-xl"></div>
+            <div className="w-80 h-80 lg:w-96 lg:h-96 overflow-hidden">
               <img
                 src="/lovable-uploads/238607e1-8cbe-46bc-8eac-87cda41e09bb.png"
                 alt="مستشار التحول الرقمي"
-                className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-white/30 shadow-2xl"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>

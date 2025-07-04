@@ -47,6 +47,14 @@ const FAQSection = () => {
       answer: language === 'ar'
         ? 'أنعم، أقدم خدمات الاستشارة المؤقتة أو الدعم المؤسسي، حيث أقدم المشورة الاحترافية والخدماتنا المتوسطة المدى.'
         : 'Yes, I provide temporary consulting services or institutional support, offering professional advice and medium-term services.'
+    },
+    {
+      question: language === 'ar'
+        ? 'ما هي مدة تنفيذ المشاريع الاستشارية؟'
+        : 'What is the duration of consulting projects?',
+      answer: language === 'ar'
+        ? 'تختلف مدة المشاريع حسب طبيعتها وحجمها، من بضعة أسابيع للاستشارات البسيطة إلى عدة أشهر للمشاريع المعقدة.'
+        : 'Project duration varies depending on their nature and size, from a few weeks for simple consultations to several months for complex projects.'
     }
   ];
 
@@ -69,18 +77,19 @@ const FAQSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        {/* 3x2 Grid Layout */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden animate-fade-in"
+              style={{ animationDelay: `${Math.floor(index/2) * 0.1}s` }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full p-6 text-right hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200 flex items-center justify-between group"
               >
-                <span className="font-tajwal text-lg font-medium flex-1 text-gray-800 group-hover:text-gray-900">
+                <span className="font-tajwal text-lg font-medium flex-1 text-gray-800 group-hover:text-gray-900 leading-relaxed">
                   {faq.question}
                 </span>
                 <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-2 rounded-full ml-3 group-hover:scale-110 transition-transform duration-200">
@@ -93,7 +102,7 @@ const FAQSection = () => {
               </button>
               
               {openFAQ === index && (
-                <div className="px-6 pb-6 text-gray-600 font-tajwal leading-relaxed animate-fade-in border-t border-gradient-to-r from-[#159bc7] to-[#4968aa] border-opacity-20">
+                <div className="px-6 pb-6 text-gray-600 font-tajwal leading-relaxed animate-fade-in border-t border-gray-100">
                   <div className="pt-4">
                     {faq.answer}
                   </div>

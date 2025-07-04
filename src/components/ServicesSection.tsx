@@ -27,7 +27,7 @@ const ServicesSection = () => {
       description: language === 'ar' 
         ? 'وضع خطط شاملة للتحول الرقمي وتطوير الاستراتيجيات المؤسسية المتقدمة'
         : 'Developing comprehensive digital transformation plans and advanced institutional strategies',
-      link: '#portfolio'
+      link: '/digital-transformation'
     },
     {
       icon: Users,
@@ -35,7 +35,7 @@ const ServicesSection = () => {
       description: language === 'ar'
         ? 'قيادة عمليات التغيير المؤسسي وتطوير القدرات البشرية والتنظيمية'
         : 'Leading institutional change processes and developing human and organizational capabilities',
-      link: '#portfolio'
+      link: '/hr-services'
     },
     {
       icon: Zap,
@@ -43,7 +43,7 @@ const ServicesSection = () => {
       description: language === 'ar'
         ? 'تحليل وتطوير العمليات الداخلية لتحقيق أقصى كفاءة وفعالية'
         : 'Analyzing and developing internal processes for maximum efficiency and effectiveness',
-      link: '#portfolio'
+      link: '/organizational-consulting'
     },
     {
       icon: Target,
@@ -51,7 +51,7 @@ const ServicesSection = () => {
       description: language === 'ar'
         ? 'وضع الخطط طويلة المدى وتحديد الأهداف الاستراتيجية للمؤسسات'
         : 'Setting long-term plans and defining strategic objectives for institutions',
-      link: '#portfolio'
+      link: '/market-analysis'
     },
     {
       icon: TrendingUp,
@@ -59,7 +59,7 @@ const ServicesSection = () => {
       description: language === 'ar'
         ? 'قياس وتحليل الأداء المؤسسي وتطوير مؤشرات الأداء الرئيسية'
         : 'Measuring and analyzing institutional performance and developing key performance indicators',
-      link: '#portfolio'
+      link: '/research-academic'
     }
   ];
 
