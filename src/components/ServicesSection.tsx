@@ -64,13 +64,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-16 bg-white">
+    <section id="services" className="py-8 lg:py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-tajwal">
+        <div className="text-center mb-8 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4 font-tajwal">
             {language === 'ar' ? 'خدماتي المتخصصة' : 'My Specialized Services'}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-tajwal">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-tajwal">
             {language === 'ar'
               ? 'مجموعة شاملة من الخدمات الاستشارية المتخصصة في التحول الرقمي والتطوير المؤسسي'
               : 'A comprehensive range of consulting services specialized in digital transformation and institutional development'
@@ -93,11 +93,11 @@ const ServicesSection = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <a href={service.link} className="block h-full">
                     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 shadow-md h-full cursor-pointer bg-white rounded-2xl overflow-hidden">
-                      <CardContent className="p-8 h-full flex flex-col text-center">
-                        <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-4 rounded-2xl w-16 h-16 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                          <service.icon className="text-white w-8 h-8" />
+                      <CardContent className="p-4 sm:p-6 lg:p-8 h-full flex flex-col text-center">
+                        <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-3 lg:p-4 rounded-2xl w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                          <service.icon className="text-white w-6 h-6 lg:w-8 lg:h-8" />
                         </div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-4 font-tajwal leading-tight">
+                        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 lg:mb-4 font-tajwal leading-tight">
                           {service.title}
                         </h3>
                         <p className="text-gray-600 font-tajwal leading-relaxed text-sm flex-1">
@@ -109,8 +109,8 @@ const ServicesSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -left-12" />
-            <CarouselNext className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -right-12" />
+            <CarouselPrevious className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -left-8 lg:-left-12" />
+            <CarouselNext className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -right-8 lg:-right-12" />
           </Carousel>
         </div>
       </div>
