@@ -22,14 +22,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo with shadow for visibility */}
           <div className="flex items-center animate-fade-in">
-            <div className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="/lovable-uploads/0570a851-dbe4-4e59-8c4f-921d0450ced5.png" 
-                alt="Logo" 
-                className="h-8 w-auto drop-shadow-md"
-                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
-              />
-            </div>
+            <a href="/" className="block">
+              <div className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="/lovable-uploads/0570a851-dbe4-4e59-8c4f-921d0450ced5.png" 
+                  alt="Logo" 
+                  className="h-8 w-auto drop-shadow-md"
+                  style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
+                />
+              </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
