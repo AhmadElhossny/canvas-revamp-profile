@@ -8,12 +8,11 @@ const Header = () => {
   const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: t('home'), href: '#home' },
-    { name: t('services'), href: '#services' },
-    { name: t('about'), href: '#about' },
-    { name: t('portfolio'), href: '#portfolio' },
-    { name: t('faq'), href: '#faq' },
-    { name: t('contact'), href: '#contact' }
+    { name: language === 'ar' ? 'الرئيسية' : 'Home', href: '/' },
+    { name: language === 'ar' ? 'الخدمات' : 'Services', href: '#services' },
+    { name: language === 'ar' ? 'من أنا؟' : 'Who Am I?', href: '#about' },
+    { name: language === 'ar' ? 'الأسئلة' : 'Questions', href: '#faq' },
+    { name: language === 'ar' ? 'تواصل معي' : 'Contact Me', href: '#contact' }
   ];
 
   return (
@@ -35,7 +34,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-reverse space-x-8">
+          <nav className="hidden md:flex space-x-reverse space-x-12">
             {navItems.map((item, index) => (
               <a
                 key={item.name}

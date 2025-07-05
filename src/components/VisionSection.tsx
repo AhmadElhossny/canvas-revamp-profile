@@ -16,6 +16,50 @@ const VisionSection = () => {
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 lg:mb-4 font-tajwal">
             {language === 'ar' ? 'من الرؤية إلى التمكين' : 'From Vision to Empowerment'}
           </h2>
+          
+          <div className="space-y-4 text-gray-700 font-tajwal">
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+              {language === 'ar' 
+                ? 'خبير استراتيجي بريادة تقنيات المعلومات الأردنية، أساعدك في تحقيق طموحاتك في التحول الرقمي والتجديد المؤسسي، مع التركيز على تطوير الحلول المبتكرة التي تناسب احتياجاتك المحددة.'
+                : 'A strategic expert in Jordanian IT leadership, I help you achieve your ambitions in digital transformation and institutional renewal, focusing on developing innovative solutions that suit your specific needs.'
+              }
+            </p>
+            
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+              {language === 'ar'
+                ? 'أؤمن بأن التحول الرقمي ليس مجرد تطبيق تقنيات جديدة، بل هو عملية شاملة تشمل تطوير الثقافة المؤسسية وبناء القدرات البشرية وتحسين العمليات بشكل متكامل.'
+                : 'I believe that digital transformation is not just about implementing new technologies, but is a comprehensive process that includes developing institutional culture, building human capabilities, and improving processes in an integrated manner.'
+              }
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+              {language === 'ar'
+                ? 'مهمتي هي مساعدة المؤسسات على تحقيق أهدافها الاستراتيجية من خلال تطبيق أفضل الممارسات العالمية في مجال التحول الرقمي والتطوير المؤسسي المستدام.'
+                : 'My mission is to help organizations achieve their strategic goals through applying global best practices in digital transformation and sustainable institutional development.'
+              }
+            </p>
+
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+              <div className="space-y-2">
+                <h3 className="font-bold text-gray-900">
+                  {language === 'ar' ? 'الخبرة والإنجازات:' : 'Experience & Achievements:'}
+                </h3>
+                <ul className="space-y-1 text-sm">
+                  <li>• {language === 'ar' ? 'أكثر من 10 سنوات خبرة في مجال التحول الرقمي' : 'More than 10 years of experience in digital transformation'}</li>
+                  <li>• {language === 'ar' ? 'شهادات معتمدة في إدارة المشاريع والتطوير المؤسسي' : 'Certified credentials in project management and institutional development'}</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-bold text-gray-900">
+                  {language === 'ar' ? 'التخصص:' : 'Specialization:'}
+                </h3>
+                <ul className="space-y-1 text-sm">
+                  <li>• {language === 'ar' ? 'نجح في قيادة أكثر من 50 مشروع تحول رقمي' : 'Successfully led more than 50 digital transformation projects'}</li>
+                  <li>• {language === 'ar' ? 'خبرة واسعة في القطاع الحكومي والخاص' : 'Extensive experience in government and private sectors'}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
