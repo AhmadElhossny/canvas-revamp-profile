@@ -8,7 +8,7 @@ const Header = () => {
   const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: language === 'ar' ? 'الرئيسية' : 'Home', href: '/' },
+    { name: language === 'ar' ? 'الرئيسية' : 'Home', href: '#home' },
     { name: language === 'ar' ? 'الخدمات' : 'Services', href: '#services' },
     { name: language === 'ar' ? 'من أنا؟' : 'Who Am I?', href: '#about' },
     { name: language === 'ar' ? 'الأسئلة' : 'Questions', href: '#faq' },
@@ -34,7 +34,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-reverse space-x-12">
+          <nav className={`hidden md:flex ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             {navItems.map((item, index) => (
               <a
                 key={item.name}

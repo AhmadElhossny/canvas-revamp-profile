@@ -7,16 +7,16 @@ const HeroSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="home" className="h-[70vh] bg-gradient-to-r from-[#159bc7] to-[#4968aa] flex items-center relative overflow-hidden">
+    <section id="home" className="h-[75vh] bg-gradient-to-r from-[#159bc7] to-[#4968aa] flex items-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 h-full">
-        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center h-full">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center h-full py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in">
+          <div className="text-white animate-fade-in flex flex-col justify-center">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4 font-tajwal leading-tight">
               {t('heroTitle')}
               <span className="block text-lg sm:text-xl lg:text-2xl xl:text-3xl mt-2 text-blue-200">
@@ -45,15 +45,19 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Image - Flipped horizontally for English */}
+          {/* Profile Image - Improved layout */}
           <div className="flex justify-center lg:justify-end items-end h-full animate-slide-in-right">
-            <div className="relative flex items-end justify-center lg:justify-end w-full h-full">
+            <div className="relative flex items-end justify-center lg:justify-end w-full h-full max-h-[80%]">
               <img
                 src="/lovable-uploads/30ae9730-1ae2-4130-a92b-684b5b85d62a.png"
                 alt="مستشار التحول الرقمي"
-                className={`h-[60%] sm:h-[65%] lg:h-[75%] w-auto object-contain object-bottom max-h-full ${
+                className={`h-full w-auto object-contain object-bottom max-w-full ${
                   language === 'en' ? 'scale-x-[-1]' : ''
                 }`}
+                style={{
+                  aspectRatio: 'auto',
+                  maxHeight: '100%'
+                }}
               />
             </div>
           </div>
