@@ -14,16 +14,12 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end min-h-[90vh] py-12 sm:py-16 lg:py-20">
-          {/* Content */}
-          <div className="text-white animate-fade-in flex flex-col justify-center order-2 lg:order-1">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[90vh] py-12 sm:py-16 lg:py-20">
+          {/* Content - Aligned with image head level */}
+          <div className="text-white animate-fade-in flex flex-col justify-start order-2 lg:order-1 lg:pt-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
               {t('heroTitle')}
             </h1>
-            
-            <p className="text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 text-blue-100 font-tajwal leading-relaxed max-w-2xl">
-              {t('heroDescription')}
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Button 
