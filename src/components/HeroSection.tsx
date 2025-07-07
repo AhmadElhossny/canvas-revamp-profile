@@ -15,11 +15,14 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[90vh] py-12 sm:py-16 lg:py-20">
-          {/* Content - Aligned with image head level */}
-          <div className="text-white animate-fade-in flex flex-col justify-start order-2 lg:order-1 lg:pt-8">
+          {/* Content */}
+          <div className="text-white animate-fade-in flex flex-col justify-center order-2 lg:order-1">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
               {t('heroTitle')}
             </h1>
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 lg:mb-10 font-tajwal leading-relaxed text-white/90">
+              {t('heroSubtitle')}
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <Button 
@@ -38,17 +41,17 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Image - Aligned to bottom */}
-          <div className="flex justify-center lg:justify-end items-end order-1 lg:order-2 animate-slide-in-right">
-            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+          {/* Profile Image - Full height, touching bottom */}
+          <div className="flex justify-center lg:justify-end items-end h-full order-1 lg:order-2 animate-slide-in-right">
+            <div className="relative h-full flex items-end">
               <img
                 src="/lovable-uploads/30ae9730-1ae2-4130-a92b-684b5b85d62a.png"
                 alt="مستشار التحول الرقمي"
-                className={`w-full h-auto object-contain ${
+                className={`h-full w-auto object-cover object-bottom ${
                   language === 'en' ? 'scale-x-[-1]' : ''
                 }`}
                 style={{
-                  aspectRatio: 'auto'
+                  maxHeight: '80vh'
                 }}
               />
             </div>
