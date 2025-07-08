@@ -1,5 +1,5 @@
 
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Mail, Search, Users, Briefcase, GraduationCap, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-white text-blue-600 hover:bg-blue-50 font-tajwal text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
               >
-                <span>📱</span>
+                <Mail className="w-5 h-5" />
                 {language === 'ar' ? 'تواصل الآن' : 'Contact Now'}
               </Button>
               <Button 
@@ -43,35 +43,38 @@ const HeroSection = () => {
                 size="lg" 
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-blue-600 font-tajwal text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
               >
-                <span>❓</span>
+                <Search className="w-5 h-5" />
                 {language === 'ar' ? 'اكتشف المزيد' : 'Discover More'}
               </Button>
             </div>
 
-            {/* Statistics */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">5</div>
-                <div className="text-sm lg:text-base text-white/80 font-tajwal">
-                  {language === 'ar' ? 'سنوات خبرة' : 'Years of Experience'}
+            {/* Enhanced Statistics */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="group text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-3 mx-auto w-fit hover:bg-white/20 transition-all duration-300">
+                  <TrendingUp className="w-8 h-8 text-white mx-auto" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-bold mb-2 font-tajwal text-white">5</div>
+                <div className="text-sm lg:text-base text-white/90 font-tajwal">
+                  {language === 'ar' ? 'سنوات خبرة' : 'Years Experience'}
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">100+</div>
-                <div className="text-sm lg:text-base text-white/80 font-tajwal">
+              <div className="group text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-3 mx-auto w-fit hover:bg-white/20 transition-all duration-300">
+                  <Briefcase className="w-8 h-8 text-white mx-auto" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-bold mb-2 font-tajwal text-white">100+</div>
+                <div className="text-sm lg:text-base text-white/90 font-tajwal">
                   {language === 'ar' ? 'مشروع ناجح' : 'Successful Projects'}
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">20+</div>
-                <div className="text-sm lg:text-base text-white/80 font-tajwal">
-                  {language === 'ar' ? 'دورات حضرتها' : 'Courses Attended'}
+              <div className="group text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-3 mx-auto w-fit hover:bg-white/20 transition-all duration-300">
+                  <GraduationCap className="w-8 h-8 text-white mx-auto" />
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">7</div>
-                <div className="text-sm lg:text-base text-white/80 font-tajwal">
-                  {language === 'ar' ? 'سنوات خبرة' : 'Years of Experience'}
+                <div className="text-3xl lg:text-4xl font-bold mb-2 font-tajwal text-white">20+</div>
+                <div className="text-sm lg:text-base text-white/90 font-tajwal">
+                  {language === 'ar' ? 'دورات حضرتها' : 'Courses Attended'}
                 </div>
               </div>
             </div>

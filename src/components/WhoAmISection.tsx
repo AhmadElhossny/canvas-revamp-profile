@@ -49,13 +49,13 @@ const WhoAmISection = () => {
   ];
 
   const stats = language === 'ar' ? [
-    { number: '10+', label: 'سنوات خبرة' },
-    { number: '50+', label: 'مشروع مكتمل' },
+    { number: '5+', label: 'سنوات خبرة' },
+    { number: '100+', label: 'مشروع مكتمل' },
     { number: '25+', label: 'عميل راضي' },
     { number: '95%', label: 'نسبة النجاح' }
   ] : [
-    { number: '10+', label: 'Years Experience' },
-    { number: '50+', label: 'Completed Projects' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '100+', label: 'Completed Projects' },
     { number: '25+', label: 'Satisfied Clients' },
     { number: '95%', label: 'Success Rate' }
   ];
