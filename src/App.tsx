@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoadingScreen from "@/components/LoadingScreen";
 import Index from "./pages/Index";
 import MarketAnalysisPage from "./pages/MarketAnalysisPage";
 import HRServicesPage from "./pages/HRServicesPage";
@@ -15,6 +16,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <LoadingScreen />
       <Toaster />
       <BrowserRouter>
         <Routes>

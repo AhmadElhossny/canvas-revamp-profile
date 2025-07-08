@@ -26,14 +26,14 @@ const AboutSection = () => {
           {/* Content */}
           <div className="animate-slide-in-right">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-tajwal">
-              {language === 'ar' ? 'من الرؤية إلى التمكين' : 'From Vision to Empowerment'}
+              {language === 'ar' ? 'من أنا' : 'About Me'}
             </h2>
             
             <div className="space-y-6 text-gray-600 font-tajwal text-lg leading-relaxed">
               <p>
                 {language === 'ar' 
-                  ? 'خبير استراتيجي بريادة تقنيات المعلومات الأردنية، أساعدك في تحقيق طموحاتك في التحول الرقمي والتجديد المؤسسي، مع التركيز على تطوير الحلول المبتكرة التي تناسب احتياجاتك المحددة.'
-                  : 'A strategic expert in Jordanian IT leadership, I help you achieve your ambitions in digital transformation and institutional renewal, focusing on developing innovative solutions that suit your specific needs.'
+                  ? 'خبير استراتيجي متخصص في التحول الرقمي وإدارة الجودة المؤسسية والحوكمة. أساعد المؤسسات في تحقيق التميز التشغيلي وتطوير الحلول الرقمية المبتكرة.'
+                  : 'Strategic expert specializing in digital transformation, institutional quality management, and governance. I help organizations achieve operational excellence and develop innovative digital solutions.'
                 }
               </p>
               
