@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[90vh] py-12 sm:py-16 lg:py-20">
           {/* Content - Left Side */}
           <div className="text-white animate-fade-in flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
               {language === 'ar' 
                 ? 'مستشار في التحول الرقمي والجودة المؤسسية والحوكمة'
                 : 'Consultant in Digital Transformation, Institutional Quality, and Governance'
@@ -30,7 +30,7 @@ const HeroSection = () => {
               }
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8">
               <Button 
                 size="lg" 
                 className="bg-white text-blue-600 hover:bg-blue-50 font-tajwal text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
@@ -46,6 +46,34 @@ const HeroSection = () => {
                 <span>❓</span>
                 {language === 'ar' ? 'اكتشف المزيد' : 'Discover More'}
               </Button>
+            </div>
+
+            {/* Statistics */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="text-center">
+                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">5</div>
+                <div className="text-sm lg:text-base text-white/80 font-tajwal">
+                  {language === 'ar' ? 'سنوات خبرة' : 'Years of Experience'}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">100+</div>
+                <div className="text-sm lg:text-base text-white/80 font-tajwal">
+                  {language === 'ar' ? 'مشروع ناجح' : 'Successful Projects'}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">20+</div>
+                <div className="text-sm lg:text-base text-white/80 font-tajwal">
+                  {language === 'ar' ? 'دورات حضرتها' : 'Courses Attended'}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl lg:text-3xl font-bold mb-1 font-tajwal">7</div>
+                <div className="text-sm lg:text-base text-white/80 font-tajwal">
+                  {language === 'ar' ? 'سنوات خبرة' : 'Years of Experience'}
+                </div>
+              </div>
             </div>
           </div>
 
