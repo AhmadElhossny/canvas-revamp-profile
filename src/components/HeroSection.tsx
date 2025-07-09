@@ -82,13 +82,14 @@ const HeroSection = () => {
 
           {/* Profile Image - Right Side, fully visible */}
           <div className="flex justify-center lg:justify-end items-end h-full order-1 lg:order-2 animate-slide-in-right">
-            <div className="relative w-full flex items-end justify-center lg:justify-end" style={{ height: 'calc(90vh - 4rem)' }}>
+            <div className="relative w-full flex items-end justify-center lg:justify-end h-full">
               <img
                 src="/lovable-uploads/30ae9730-1ae2-4130-a92b-684b5b85d62a.png"
                 alt={language === 'ar' ? 'مستشار التحول الرقمي' : 'Digital Transformation Consultant'}
                 className={`h-full w-auto object-contain object-bottom ${
                   language === 'en' ? 'scale-x-[-1]' : ''
                 }`}
+                style={{ maxHeight: '100%', height: '100%' }}
               />
             </div>
           </div>
@@ -96,7 +97,7 @@ const HeroSection = () => {
       </div>
 
       {/* Enhanced Scroll Indicator - positioned to not interfere with image */}
-      <div className="absolute bottom-6 left-1/4 transform -translate-x-1/2 animate-bounce z-20">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-20 lg:left-1/4">
         <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-300">
           <ArrowDown className="text-white drop-shadow-lg" size={24} />
         </div>

@@ -20,11 +20,26 @@ const DigitalTransformationPageContent = () => {
   }, [api]);
 
   const services = [
-    language === 'ar' ? 'بناء حلول تقنية مخصصة' : 'Custom Technology Solutions',
-    language === 'ar' ? 'خدمة تصميم الجرافيك الاحترافي' : 'Professional Graphic Design',
-    language === 'ar' ? 'تحليل البيانات والتقارير المؤسسية' : 'Data Analysis & Institutional Reports',
-    language === 'ar' ? 'تحسين تجربة المستخدم للأنظمة' : 'System User Experience Optimization',
-    language === 'ar' ? 'أتمتة العمليات الداخلية' : 'Internal Process Automation'
+    {
+      title: language === 'ar' ? 'بناء حلول تقنية مخصصة' : 'Custom Technology Solutions',
+      description: language === 'ar' ? 'تطوير وبناء الحلول التقنية المتقدمة حسب احتياجات العملاء' : 'Developing and building advanced technology solutions according to client needs'
+    },
+    {
+      title: language === 'ar' ? 'خدمة تصميم الجرافيك الاحترافي' : 'Professional Graphic Design',
+      description: language === 'ar' ? 'تصميم الهوية البصرية والمواد التسويقية بجودة عالية' : 'Designing visual identity and marketing materials with high quality'
+    },
+    {
+      title: language === 'ar' ? 'تحليل البيانات والتقارير المؤسسية' : 'Data Analysis & Institutional Reports',
+      description: language === 'ar' ? 'تحليل البيانات وإعداد التقارير الاستراتيجية للمؤسسات' : 'Data analysis and preparing strategic reports for institutions'
+    },
+    {
+      title: language === 'ar' ? 'تحسين تجربة المستخدم للأنظمة' : 'System User Experience Optimization',
+      description: language === 'ar' ? 'تطوير وتحسين واجهات المستخدم لتحقيق أفضل تجربة' : 'Developing and improving user interfaces for optimal experience'
+    },
+    {
+      title: language === 'ar' ? 'أتمتة العمليات الداخلية' : 'Internal Process Automation',
+      description: language === 'ar' ? 'أتمتة العمليات والإجراءات لزيادة الكفاءة والإنتاجية' : 'Automating processes and procedures to increase efficiency and productivity'
+    }
   ];
 
   return (
@@ -60,9 +75,12 @@ const DigitalTransformationPageContent = () => {
                   <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                     <CardContent className="p-8 h-full flex flex-col justify-center items-center text-center">
                       <div className="w-2 h-2 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-full mb-4"></div>
-                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed">
-                        {service}
+                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed mb-3">
+                        {service.title}
                       </h3>
+                      <p className="text-gray-600 font-tajwal text-sm leading-relaxed">
+                        {service.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </CarouselItem>

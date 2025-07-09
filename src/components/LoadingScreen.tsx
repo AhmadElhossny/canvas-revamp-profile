@@ -16,20 +16,35 @@ const LoadingScreen = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-r from-[#159bc7] to-[#4968aa]">
       <div className="text-center">
-        {/* Animated text */}
-        <div className="text-white text-6xl font-bold font-tajwal mb-8 tracking-wider">
-          <span className="inline-block animate-pulse">L</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.1s' }}>O</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.2s' }}>A</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.3s' }}>D</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.4s' }}>I</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>N</span>
-          <span className="inline-block animate-pulse" style={{ animationDelay: '0.6s' }}>G</span>
+        {/* Animated Logo */}
+        <div className="mb-8 animate-pulse">
+          <img 
+            src="/lovable-uploads/b24ce843-6de0-4da1-9a99-5c374a72e274.png" 
+            alt="Logo" 
+            className="h-24 w-auto mx-auto animate-bounce filter drop-shadow-lg"
+            style={{ 
+              animation: 'bounce 1s infinite, pulse 2s infinite, float 3s ease-in-out infinite',
+              filter: 'drop-shadow(0 10px 25px rgba(255,255,255,0.3))'
+            }}
+          />
         </div>
         
-        {/* Loading spinner */}
-        <div className="w-16 h-16 mx-auto border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+        {/* Loading indicator */}
+        <div className="flex justify-center items-center space-x-2">
+          <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+          <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+          <div className="w-3 h-3 bg-white rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+        </div>
       </div>
+      
+      <style>
+        {`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        `}
+      </style>
     </div>
   );
 };

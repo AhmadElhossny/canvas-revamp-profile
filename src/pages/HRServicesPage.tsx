@@ -20,11 +20,26 @@ const HRServicesPageContent = () => {
   }, [api]);
 
   const services = [
-    language === 'ar' ? 'إعداد الاستراتيجيات والسياسات' : 'Strategy & Policy Development',
-    language === 'ar' ? 'برامج رفع القادة والموظفين الجدد' : 'Leadership & New Employee Programs',
-    language === 'ar' ? 'تحليل فجوات الأداء وتقييم القدرات' : 'Performance Gap Analysis',
-    language === 'ar' ? 'تصميم برامج التدريب والتطوير' : 'Training Program Design',
-    language === 'ar' ? 'استشارات الموارد البشرية' : 'HR Consulting'
+    {
+      title: language === 'ar' ? 'إعداد الاستراتيجيات والسياسات' : 'Strategy & Policy Development',
+      description: language === 'ar' ? 'تطوير الخطط الاستراتيجية وصياغة السياسات المؤسسية' : 'Developing strategic plans and institutional policy formulation'
+    },
+    {
+      title: language === 'ar' ? 'برامج رفع القادة والموظفين الجدد' : 'Leadership & New Employee Programs',
+      description: language === 'ar' ? 'برامج تأهيل وتطوير القيادات والموظفين الجدد' : 'Leadership development and new employee onboarding programs'
+    },
+    {
+      title: language === 'ar' ? 'تحليل فجوات الأداء وتقييم القدرات' : 'Performance Gap Analysis',
+      description: language === 'ar' ? 'تحليل الفجوات الأدائية وتقييم مستويات الكفاءة' : 'Performance gap analysis and competency assessment'
+    },
+    {
+      title: language === 'ar' ? 'تصميم برامج التدريب والتطوير' : 'Training Program Design',
+      description: language === 'ar' ? 'إعداد وتصميم برامج التدريب المتخصصة' : 'Designing and developing specialized training programs'
+    },
+    {
+      title: language === 'ar' ? 'استشارات الموارد البشرية' : 'HR Consulting',
+      description: language === 'ar' ? 'خدمات استشارية شاملة في إدارة الموارد البشرية' : 'Comprehensive consulting services in human resource management'
+    }
   ];
 
   return (
@@ -60,9 +75,12 @@ const HRServicesPageContent = () => {
                   <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                     <CardContent className="p-8 h-full flex flex-col justify-center items-center text-center">
                       <div className="w-2 h-2 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-full mb-4"></div>
-                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed">
-                        {service}
+                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed mb-3">
+                        {service.title}
                       </h3>
+                      <p className="text-gray-600 font-tajwal text-sm leading-relaxed">
+                        {service.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </CarouselItem>

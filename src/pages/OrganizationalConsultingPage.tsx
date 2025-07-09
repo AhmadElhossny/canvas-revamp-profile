@@ -20,11 +20,26 @@ const OrganizationalConsultingPageContent = () => {
   }, [api]);
 
   const services = [
-    language === 'ar' ? 'الإدارة والجودة المؤسسية' : 'Management & Institutional Quality',
-    language === 'ar' ? 'إدارة الجودة (TQM) المتكاملة' : 'Total Quality Management (TQM)',
-    language === 'ar' ? 'تحليل الأعمال' : 'Business Analysis',
-    language === 'ar' ? 'استشارات الموارد البشرية' : 'HR Consulting',
-    language === 'ar' ? 'التدريب في مجال الإدارة والأعمال' : 'Management & Business Training'
+    {
+      title: language === 'ar' ? 'الإدارة والجودة المؤسسية' : 'Management & Institutional Quality',
+      description: language === 'ar' ? 'تطوير أنظمة الإدارة وضمان الجودة المؤسسية' : 'Developing management systems and ensuring institutional quality'
+    },
+    {
+      title: language === 'ar' ? 'إدارة الجودة (TQM) المتكاملة' : 'Total Quality Management (TQM)',
+      description: language === 'ar' ? 'تطبيق معايير إدارة الجودة الشاملة والتحسين المستمر' : 'Implementing comprehensive quality management standards and continuous improvement'
+    },
+    {
+      title: language === 'ar' ? 'تحليل الأعمال' : 'Business Analysis',
+      description: language === 'ar' ? 'تحليل العمليات التجارية وتحديد الفرص التطويرية' : 'Business process analysis and identifying development opportunities'
+    },
+    {
+      title: language === 'ar' ? 'استشارات الموارد البشرية' : 'HR Consulting',
+      description: language === 'ar' ? 'استشارات متخصصة في تطوير وإدارة الموارد البشرية' : 'Specialized consulting in human resource development and management'
+    },
+    {
+      title: language === 'ar' ? 'التدريب في مجال الإدارة والأعمال' : 'Management & Business Training',
+      description: language === 'ar' ? 'برامج تدريبية متقدمة في الإدارة وتطوير الأعمال' : 'Advanced training programs in management and business development'
+    }
   ];
 
   return (
@@ -60,9 +75,12 @@ const OrganizationalConsultingPageContent = () => {
                   <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                     <CardContent className="p-8 h-full flex flex-col justify-center items-center text-center">
                       <div className="w-2 h-2 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-full mb-4"></div>
-                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed">
-                        {service}
+                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed mb-3">
+                        {service.title}
                       </h3>
+                      <p className="text-gray-600 font-tajwal text-sm leading-relaxed">
+                        {service.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </CarouselItem>

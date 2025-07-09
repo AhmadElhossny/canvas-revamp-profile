@@ -20,12 +20,30 @@ const ResearchAcademicPageContent = () => {
   }, [api]);
 
   const services = [
-    language === 'ar' ? 'الإرشاد الأكاديمي' : 'Academic Guidance',
-    language === 'ar' ? 'تصميم عروض تقديمية تحتية' : 'Professional Presentation Design',
-    language === 'ar' ? 'خدمة التقييم الأكاديمي' : 'Academic Evaluation Services',
-    language === 'ar' ? 'صياغة مقترحات البحث' : 'Research Proposal Writing',
-    language === 'ar' ? 'تحليل البيانات وتفسير النتائج' : 'Data Analysis & Results Interpretation',
-    language === 'ar' ? 'إعداد أدوات البحث والاستبيانات' : 'Research Tools & Survey Development'
+    {
+      title: language === 'ar' ? 'الإرشاد الأكاديمي' : 'Academic Guidance',
+      description: language === 'ar' ? 'توجيه وإرشاد الطلاب والباحثين في مسيرتهم الأكاديمية' : 'Guiding and mentoring students and researchers in their academic journey'
+    },
+    {
+      title: language === 'ar' ? 'تصميم عروض تقديمية تحتية' : 'Professional Presentation Design',
+      description: language === 'ar' ? 'إعداد وتصميم العروض التقديمية المهنية والأكاديمية' : 'Creating and designing professional and academic presentations'
+    },
+    {
+      title: language === 'ar' ? 'خدمة التقييم الأكاديمي' : 'Academic Evaluation Services',
+      description: language === 'ar' ? 'تقييم الأبحاث والمشاريع الأكاديمية بمعايير علمية' : 'Evaluating research and academic projects with scientific standards'
+    },
+    {
+      title: language === 'ar' ? 'صياغة مقترحات البحث' : 'Research Proposal Writing',
+      description: language === 'ar' ? 'كتابة وصياغة مقترحات البحث العلمي المتخصصة' : 'Writing and formulating specialized scientific research proposals'
+    },
+    {
+      title: language === 'ar' ? 'تحليل البيانات وتفسير النتائج' : 'Data Analysis & Results Interpretation',
+      description: language === 'ar' ? 'تحليل البيانات الإحصائية وتفسير النتائج البحثية' : 'Statistical data analysis and research results interpretation'
+    },
+    {
+      title: language === 'ar' ? 'إعداد أدوات البحث والاستبيانات' : 'Research Tools & Survey Development',
+      description: language === 'ar' ? 'تصميم وإعداد الأدوات البحثية والاستبيانات العلمية' : 'Designing and developing research tools and scientific surveys'
+    }
   ];
 
   return (
@@ -61,9 +79,12 @@ const ResearchAcademicPageContent = () => {
                   <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                     <CardContent className="p-8 h-full flex flex-col justify-center items-center text-center">
                       <div className="w-2 h-2 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-full mb-4"></div>
-                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed">
-                        {service}
+                      <h3 className="text-xl font-bold text-gray-900 font-tajwal leading-relaxed mb-3">
+                        {service.title}
                       </h3>
+                      <p className="text-gray-600 font-tajwal text-sm leading-relaxed">
+                        {service.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </CarouselItem>
