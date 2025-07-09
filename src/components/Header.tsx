@@ -19,17 +19,15 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm animate-slide-in-right">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo with shadow for visibility */}
+          {/* Logo with transparent background */}
           <div className="flex items-center animate-fade-in">
             <a href="/" className="block">
-              <div className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src="/lovable-uploads/0570a851-dbe4-4e59-8c4f-921d0450ced5.png" 
-                  alt="Logo" 
-                  className="h-8 w-auto drop-shadow-md"
-                  style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
-                />
-              </div>
+              <img 
+                src="/lovable-uploads/0570a851-dbe4-4e59-8c4f-921d0450ced5.png" 
+                alt="Logo" 
+                className="h-10 w-auto hover:scale-105 transition-transform duration-300"
+                style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.1))' }}
+              />
             </a>
           </div>
 
