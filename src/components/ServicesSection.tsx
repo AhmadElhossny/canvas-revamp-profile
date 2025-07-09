@@ -64,54 +64,65 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-8 lg:py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-4 font-tajwal">
+    <section id="services" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header with Icon */}
+        <div className="text-center mb-12">
+          <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-4 rounded-2xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <Users className="text-white w-8 h-8" />
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-tajwal">
             {language === 'ar' ? 'الحلول الاستشارية المتقدمة' : 'Advanced Consulting Solutions'}
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-tajwal">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-tajwal">
             {language === 'ar'
-              ? 'مجموعة شاملة من الخدمات الاستشارية المتخصصة في التحول الرقمي والتطوير المؤسسي'
-              : 'A comprehensive range of consulting services specialized in digital transformation and institutional development'
+              ? 'خدمات متخصصة في تطوير الموارد البشرية والكفاءات المؤسسية'
+              : 'Specialized services in human resources development and institutional competencies'
             }
           </p>
         </div>
 
-        <div className="relative">
-          <Carousel
-            setApi={setApi}
-            opts={{
-              align: "start",
-              loop: true,
-              direction: language === 'ar' ? 'rtl' : 'ltr'
-            }}
-            className="w-full max-w-6xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {services.map((service, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <a href={service.link} className="block h-full">
-                    <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 shadow-md h-full cursor-pointer bg-white rounded-2xl overflow-hidden">
-                      <CardContent className="p-4 sm:p-6 lg:p-8 h-full flex flex-col text-center">
-                        <div className="bg-gradient-to-r from-[#159bc7] to-[#4968aa] p-3 lg:p-4 rounded-2xl w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                          <service.icon className="text-white w-6 h-6 lg:w-8 lg:h-8" />
-                        </div>
-                        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 lg:mb-4 font-tajwal leading-tight">
+        {/* Services Container with Curved Border Design */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Decorative Border */}
+          <div className="absolute inset-0 border-4 border-red-500 rounded-[3rem] transform rotate-1 opacity-20"></div>
+          
+          <div className="relative bg-white rounded-3xl p-8 shadow-lg">
+            <Carousel
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+                direction: language === 'ar' ? 'rtl' : 'ltr'
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {services.map((service, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                    <a href={service.link} className="block h-full">
+                      <div className="group p-6 text-center h-full flex flex-col justify-center hover:bg-blue-50 rounded-2xl transition-all duration-300">
+                        {/* Blue Dot */}
+                        <div className="w-3 h-3 bg-blue-500 rounded-full mx-auto mb-4"></div>
+                        
+                        <h3 className="text-lg font-bold text-gray-900 mb-3 font-tajwal leading-tight">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 font-tajwal leading-relaxed text-sm flex-1">
+                        
+                        <p className="text-gray-600 font-tajwal text-sm leading-relaxed">
                           {service.description}
                         </p>
-                      </CardContent>
-                    </Card>
-                  </a>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -left-8 lg:-left-12" />
-            <CarouselNext className="text-gray-600 border-gray-300 hover:bg-gradient-to-r hover:from-[#159bc7] hover:to-[#4968aa] hover:text-white hover:border-transparent transition-all duration-300 -right-8 lg:-right-12" />
-          </Carousel>
+                      </div>
+                    </a>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              
+              {/* Navigation Arrows */}
+              <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2 w-10 h-10 bg-red-500 hover:bg-red-600 border-0 text-white rounded-full shadow-lg" />
+              <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2 w-10 h-10 bg-red-500 hover:bg-red-600 border-0 text-white rounded-full shadow-lg" />
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>

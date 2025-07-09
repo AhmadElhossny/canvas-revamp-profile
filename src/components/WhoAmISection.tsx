@@ -61,7 +61,7 @@ const WhoAmISection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="who-am-i" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -126,9 +126,14 @@ const WhoAmISection = () => {
           </p>
           <div className="flex items-center justify-center gap-3">
             <CheckCircle className="w-5 h-5" />
-            <span className="font-tajwal">
+            <a 
+              href="https://wa.me/96170495243" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-tajwal hover:underline transition-all duration-300"
+            >
               {language === 'ar' ? 'استشارة مجانية' : 'Free Consultation'}
-            </span>
+            </a>
           </div>
         </div>
       </div>

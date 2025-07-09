@@ -10,7 +10,7 @@ const Header = () => {
   const navItems = [
     { name: language === 'ar' ? 'الرئيسية' : 'Home', href: '#home' },
     { name: language === 'ar' ? 'الخدمات' : 'Services', href: '#services' },
-    { name: language === 'ar' ? 'من أنا؟' : 'Who Am I?', href: '#about' },
+    { name: language === 'ar' ? 'من أنا؟' : 'Who Am I?', href: '#who-am-i' },
     { name: language === 'ar' ? 'الأسئلة' : 'Questions', href: '#faq' },
     { name: language === 'ar' ? 'تواصل معي' : 'Contact Me', href: '#contact' }
   ];
