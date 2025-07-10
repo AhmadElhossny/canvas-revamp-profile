@@ -87,7 +87,7 @@ const HeroSection = () => {
                 src="/lovable-uploads/bc711a19-51c2-4c9d-9c60-4da7e43d8489.png"
                 alt={language === 'ar' ? 'مستشار التحول الرقمي' : 'Digital Transformation Consultant'}
                 className={`w-auto h-full object-cover object-bottom ${
-                  language === 'en' ? 'scale-x-[-1]' : ''
+                  language === 'ar' ? 'scale-x-[-1]' : ''
                 }`}
                 style={{ maxHeight: '100vh' }}
               />

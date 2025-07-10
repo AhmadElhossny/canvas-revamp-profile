@@ -1,5 +1,6 @@
-import { CheckCircle, Target, Users, Briefcase, Award, TrendingUp } from 'lucide-react';
+import { CheckCircle, Target, Users, Briefcase, Award, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const WhoAmISection = () => {
   const { language } = useLanguage();
@@ -90,27 +91,35 @@ const WhoAmISection = () => {
           ))}
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="group p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-[#159bc7]/20">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="text-white w-6 h-6" />
+        {/* Features Slider */}
+        <div className="relative">
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {features.map((feature, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
+                  <div className="group p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-[#159bc7]/20 h-full">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-r from-[#159bc7] to-[#4968aa] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <feature.icon className="text-white w-6 h-6" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-tajwal">
+                          {feature.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed font-tajwal text-justify">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 font-tajwal">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed font-tajwal text-justify">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-white text-white border-[#159bc7] hover:bg-[#159bc7] hover:text-white -left-4 md:-left-6" />
+            <CarouselNext className="bg-white text-white border-[#159bc7] hover:bg-[#159bc7] hover:text-white -right-4 md:-right-6" />
+          </Carousel>
         </div>
 
         {/* Bottom CTA */}
