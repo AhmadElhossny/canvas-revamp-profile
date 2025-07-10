@@ -14,9 +14,9 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[90vh] py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch min-h-screen">
           {/* Content - Left Side */}
-          <div className="text-white animate-fade-in flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left">
+          <div className="text-white animate-fade-in flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left py-12 sm:py-16 lg:py-20">
             <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-6 lg:mb-8 font-tajwal leading-tight">
               {language === 'ar' 
                 ? 'مستشار في التحول الرقمي والجودة المؤسسية والحوكمة'
@@ -80,16 +80,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Profile Image - Right Side, fully visible */}
-          <div className="flex justify-center lg:justify-end items-end h-full order-1 lg:order-2 animate-slide-in-right">
-            <div className="relative w-full flex items-end justify-center lg:justify-end h-full">
+          {/* Profile Image - Right Side */}
+          <div className="flex justify-center lg:justify-end items-end order-1 lg:order-2 animate-slide-in-right min-h-screen">
+            <div className="relative w-full h-full flex items-end justify-center lg:justify-end">
               <img
-                src="/lovable-uploads/30ae9730-1ae2-4130-a92b-684b5b85d62a.png"
+                src="/lovable-uploads/bc711a19-51c2-4c9d-9c60-4da7e43d8489.png"
                 alt={language === 'ar' ? 'مستشار التحول الرقمي' : 'Digital Transformation Consultant'}
-                className={`h-full w-auto object-contain object-bottom ${
+                className={`w-auto h-full object-cover object-bottom ${
                   language === 'en' ? 'scale-x-[-1]' : ''
                 }`}
-                style={{ maxHeight: '100%', height: '100%' }}
+                style={{ maxHeight: '100vh' }}
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ const HeroSection = () => {
       </div>
 
       {/* Enhanced Scroll Indicator - positioned to not interfere with image */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce z-20 lg:left-1/4">
+      <div className="absolute bottom-6 left-1/4 transform -translate-x-1/2 animate-bounce z-20">
         <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 hover:bg-white/30 transition-all duration-300">
           <ArrowDown className="text-white drop-shadow-lg" size={24} />
         </div>
